@@ -136,8 +136,8 @@ def mining():
     #make the transaction list empty
     transaction_of_current_node[:] = []
     #create new block
-    mining_block = Block(new_block_index, new_block_timestamp, new_block_data, new_block_hash)
-    blockchain.append(mined_block)
+    mining_block = Block(new_block_index, new_block_timestamp, new_block_data, last_block_hash)
+    blockchain.append(mining_block)
     return json.dumps(
       {
        "index": new_block_index,
